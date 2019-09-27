@@ -1,17 +1,27 @@
+
 describe("Verify webdriveruniversity homepage links works correctly", function () {
   it("Check the Contact Us button opens the relevant page", function (done) {
-    browser.url('http://webdriveruniversity.com/index.html')
-    var title = browser.getTitle();
-    console.log('Title is: ' + title);
+    browser.url('/');
+    expect('WebDriverUniversity.com').to.equal(browser.getTitle());
     browser.click('#contact-us');
-    browser.pause(1000);
+
+    var tabIds = browser.getTabIds();
+    browser.switchTab(tabIds[1]);
+    var url = browser.getUrl();
+    expect('WebDriver | Contact Us').to.equal(browser.getTitle());
+    expect(url).to.include("Contact-Us", "URL mismatch");
+
+    browser.close();
+
   });
   it("Check that login Button opens relevant page", function (done) {
-    browser.url('http://webdriveruniversity.com/index.html')
-    browser.click('#login-portal')
-    browser.pause(1000)
-    var title = browser.getTitle();
-    console.log('Title is: ' + title);
+    browser.url('/');
+    browser.getTitle().should.equal('WebDriverUniversity.com');
+
+    browser.click('#login-portal');
+
   });
 });
+
+
 
