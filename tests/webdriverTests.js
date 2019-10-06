@@ -1,4 +1,3 @@
-
 describe("Verify webdriveruniversity homepage links works correctly", function () {
   it("Check the Contact Us button opens the relevant page", function (done) {
     browser.url('/');

@@ -88,6 +88,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
+    // baseUrl: baseUrl,
     baseUrl: baseUrl,
     //
     // Default timeout for all waitFor* commands.
@@ -123,6 +124,10 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone'],
+    // port: 7777,
+    // seleniumArgs: {
+    //     seleniumArgs: ["-port", "7777"]
+    // },
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: http://webdriver.io/guide/testrunner/frameworks.html
