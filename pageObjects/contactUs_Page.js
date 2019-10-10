@@ -39,10 +39,10 @@ class ContactUs_Page {
     expect(validateSuccessMessageHeader, "No success message").to.be.true;
   }
   confirmSumbissionFail() {
-    var validateSuccessMessageHeader = browser.waitUntil(function () {
+    browser.waitUntil(function () {
       return browser.getText("body") == "Error: all fields are required";
     }, 3000);
-    expect(validateSuccessMessageHeader).to.be.true;
+    expect(browser.getText("body")).to.include("Error: all fields are required");
   }
 }
 
