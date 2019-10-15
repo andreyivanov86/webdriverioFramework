@@ -140,7 +140,21 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    // reporters: ['dot'],
+    reporters: ['dot', 'allure'],
+    reporterOptions: {
+        // json: {
+        //     outputDir: "./reports/json-reports"
+        // },
+        // junit: {
+        //     outputDir: "./reports/junit-reports"
+        // },
+        allure: {
+            outputDir: "./reports/allure-reports",
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: true,
+            useCucumberStepReporter: false
+        }
+    },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
