@@ -149,7 +149,7 @@ exports.config = {
         //     outputDir: "./reports/junit-reports"
         // },
         allure: {
-            outputDir: "./reports/allure-reports",
+            outputDir: "./allure-reports",
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: true,
             useCucumberStepReporter: false
@@ -184,8 +184,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config, capabilities, specs) {
+        const del = require('del');
+        del(['allure-reports']);
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.

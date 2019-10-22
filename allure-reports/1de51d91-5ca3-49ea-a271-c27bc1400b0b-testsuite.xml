@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1571364817961' stop='1571364825245'>
+    <name>Test Contact us form.</name>
+    <title>Test Contact us form.</title>
+    <test-cases>
+        <test-case start='1571364817962' status='passed' stop='1571364821958'>
+            <name>Test 1: Should submit with out all of the fields filled</name>
+            <title>Test 1: Should submit with out all of the fields filled</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/andreyi/Documents/JavaAutomation/webdriverIoFramework/tests/contactUsPageTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1571364821961' status='failed' stop='1571364823658'>
+            <name>Test 2: Should NOT submit with out all of the fields filled</name>
+            <title>Test 2: Should NOT submit with out all of the fields filled</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/andreyi/Documents/JavaAutomation/webdriverIoFramework/tests/contactUsPageTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>expected 'Error: all fields are required\nError: Invalid email address' to include 'Error: all fields are required555'</message>
+                <stack-trace>AssertionError: expected 'Error: all fields are required\nError: Invalid email address' to include 'Error: all fields are required555'
+                    at Context.&lt;anonymous> (/Users/andreyi/Documents/JavaAutomation/webdriverIoFramework/tests/contactUsPageTest.js:20:40)
+                    at Promise (&lt;anonymous>)
+                    at F (/Users/andreyi/Documents/JavaAutomation/webdriverIoFramework/node_modules/core-js/library/modules/_export.js:36:28)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1571364823661' status='passed' stop='1571364825245'>
+            <name>Test 3: Should NOT work with out all of the fields filled</name>
+            <title>Test 3: Should NOT work with out all of the fields filled</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/andreyi/Documents/JavaAutomation/webdriverIoFramework/tests/contactUsPageTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

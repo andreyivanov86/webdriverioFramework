@@ -20,6 +20,7 @@
     "webdriverio": "^4.13.2"
   },
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "del": "^4.1.1"
   }
 }
